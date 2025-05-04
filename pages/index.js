@@ -1,44 +1,37 @@
+import Head from 'next/head';
+
 export default function Home() {
   return (
-    <main style={{
-      backgroundImage: 'url(https://images.unsplash.com/photo-1517502166878-35c93a0072bb)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontFamily: 'Arial, sans-serif',
-      color: '#fff',
-      textShadow: '1px 1px 2px #000'
-    }}>
-      <h1 style={{ fontSize: '3rem', color: '#FFD700' }}>Bienvenido a iARS</h1>
-      <p style={{ fontSize: '1.5rem', color: '#ff6600' }}>Tu mundo. Tu ritmo.</p>
+    <>
+      <Head>
+        <title>iARS - Tu mundo. Tu ritmo.</title>
+        <meta name="description" content="Auriculares iARS – Conecta con tu ritmo y con lo más alto que hay dentro de ti." />
+        <link rel="icon" href="/logo.png" />
+      </Head>
 
+      <main style={{ textAlign: 'center', padding: '2rem' }}>
+        <h1>Bienvenido a iARS</h1>
+        <p>Tu mundo. Tu ritmo.</p>
+        <img src="/logo.png" alt="iARS logo" style={{ width: '150px', margin: '2rem auto' }} />
+        <p>
+          Cada vez que uses un iARS, te conectarás no solo con la música, sino con lo más alto que hay dentro de ti.
+        </p>
+      </main>
+
+      {/* Botón flotante de WhatsApp */}
       <a
         href="https://wa.me/51966885672"
         target="_blank"
         rel="noopener noreferrer"
         style={{
           position: 'fixed',
-          bottom: '30px',
-          right: '30px',
-          backgroundColor: '#25D366',
-          color: 'white',
-          borderRadius: '50%',
-          width: '60px',
-          height: '60px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: '28px',
-          textDecoration: 'none',
-          boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
+          bottom: '20px',
+          right: '20px',
+          zIndex: 1000
         }}
       >
-        💬
+        <img src="/logo.png" alt="WhatsApp iARS" style={{ width: '60px', height: '60px' }} />
       </a>
-    </main>
+    </>
   );
 }
